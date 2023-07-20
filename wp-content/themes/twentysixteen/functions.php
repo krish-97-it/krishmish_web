@@ -609,3 +609,5 @@ function addcustomScript(){
 	echo '<script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/first-blog.js"></script>';
 }
 add_action('wp_head','addcustomScript');
+
+require get_theme_file_path('/custom-api/custom-api.php');
