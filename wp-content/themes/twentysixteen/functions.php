@@ -600,14 +600,14 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
 
-function addcustomStyle(){
-	echo '<link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/first-blog.css">';
-}
-add_action('wp_head','addcustomStyle');
+// function addcustomStyle(){
+// 	echo '<link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/first-blog.css">';
+// }
+// add_action('wp_head','addcustomStyle');
 
-function addcustomScript(){
-	echo '<script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/first-blog.js"></script>';
-}
-add_action('wp_head','addcustomScript');
+// function addcustomScript(){
+// 	echo '<script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/first-blog.js"></script>';
+// }
+// add_action('wp_head','addcustomScript');
 
 require get_theme_file_path('/custom-api/custom-api.php');
