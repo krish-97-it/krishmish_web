@@ -40,7 +40,7 @@ function get_header( $name = null, $args = array() ) {
 	$templates = array();
 	$name      = (string) $name;
 	if ( '' !== $name ) {
-		$templates[] = "header-{$name}.php";
+		$templates[] = "{$name}-header.php";
 	}
 
 	$templates[] = 'header.php';
@@ -84,7 +84,7 @@ function get_footer( $name = null, $args = array() ) {
 	$templates = array();
 	$name      = (string) $name;
 	if ( '' !== $name ) {
-		$templates[] = "footer-{$name}.php";
+		$templates[] = "{$name}-footer.php";
 	}
 
 	$templates[] = 'footer.php';
