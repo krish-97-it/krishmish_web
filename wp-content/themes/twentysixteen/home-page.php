@@ -24,7 +24,6 @@
         <link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/custom-header.css">
         <link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/custom-footer.css">
         <link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/home-page.css">
-        
         <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
             <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
         <?php endif; ?>
@@ -68,14 +67,14 @@
                         </div>
 
                         <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#myCarousel" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                             <span class="sr-only">Next</span>
-                        </a>
+                        </a> -->
                     </div>
                     <div class="col-md-12 body-bg-image-home">
                         <h3 class="blink-heading ">Hello User !!</h3>
@@ -84,9 +83,19 @@
                                 Welcome to KrishMish, a house of tasty, fresh and affordable combos of food. We provide Indian, Chinese, Korean multi-cusine. Ok Oook! enough introduction for now, Are you hungry? Don't worry KrishMish is here and your Food is waiting for you.
                             </p>
                             <div class="menu-card-link">
-                                <a href="#">
+                                <h5 class="multi-cuisine-txt">Visit Our Multi-Cuisine <span class="glyphicon glyphicon glyphicon-link glyphicon-hand-down custom-glyphicon"></span></h5>
+                                <a href="#" class="btn go-to-indian-cuisine menu-redirect-btn">
+                                    <span class="glyphicon glyphicon-hand-right custom-glyphicon-menu"></span>&nbsp; Indian Cuisine&nbsp;
+                                </a><br>
+                                <a href="#" class="btn go-to-chinese-cuisine menu-redirect-btn">
+                                    <span class="glyphicon glyphicon-hand-right custom-glyphicon-menu"></span>&nbsp; Chinese Cuisine
+                                </a><br>
+                                <a href="#" class="btn go-to-korean-cuisine menu-redirect-btn">
+                                    <span class="glyphicon glyphicon-hand-right custom-glyphicon-menu"></span>&nbsp; Korean Cuisine
+                                </a><br>
+                                <!-- <a href="#">
                                     <img class="menu-logo" src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Menu-card-icon-two-e1689834287835.png" alt="menu-card-icon" height="auto" width="50%">
-                                </a>
+                                </a> -->
                             </div>
                             
                             <svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="link__svg" aria-labelledby="link2-title link2-desc">
@@ -106,10 +115,69 @@
 
                                 <text class="link__text">
                                     <textPath href="#link-circle-alt" stroke="none">
-                                    -- •-- Your Table Is Ready! -- • -- click On The Menu Card
+                                    -- •-- Your Table Is Ready! -- • -- Go For A Cuisine
                                     </textPath>
                                 </text>
                             </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-12 related-blog-section special-Combos-section">
+                        <h3 class="related-blog-h"><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span><b> Special Combos </b><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span></h3>
+                        <div class="row blog-card-row">
+                            <div class="col-sm-4 blog-card">
+                                <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-heading">Budget Bites</h4>
+                                    <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                    <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 blog-card">
+                                <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-heading">Budget Bites</h4>
+                                    <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                    <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 blog-card">
+                                <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-heading">Budget Bites</h4>
+                                    <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                    <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 related-blog-section krishmish-special">
+                        <h3 class="related-blog-h"><span class="glyphicon glyphicon-heart custom-glyphicon-icon"></span><b> KrishMish Special </b><span class="glyphicon glyphicon-heart custom-glyphicon-icon"></span></h3>
+                        <div class="row blog-card-row">
+                            <div class="col-sm-4 blog-card">
+                                <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-heading">Budget Bites</h4>
+                                    <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                    <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 blog-card">
+                                <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-heading">Budget Bites</h4>
+                                    <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                    <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 blog-card">
+                                <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-heading">Budget Bites</h4>
+                                    <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                    <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-12 related-blog-section">
@@ -141,6 +209,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </main>
@@ -152,3 +221,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/home-page.js"></script>
+<script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/custom-header-footer.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
