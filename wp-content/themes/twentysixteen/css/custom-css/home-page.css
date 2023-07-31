@@ -134,6 +134,9 @@
     margin-bottom: 15px;
     min-width: 180px;
 }
+.menu-redirect-btn:hover, .menu-redirect-btn:focus{
+    color: white;
+}
 .multi-cuisine-txt{
     color: #9d9d9d;
     font-size: 18px !important;

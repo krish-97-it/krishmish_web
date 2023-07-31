@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 related-blog-section">
-                        <h3 class="related-blog-h">Related Blogs</h3>
+                        <h3 class="related-blog-h"><span class="glyphicon glyphicon-tower custom-glyphicon-icon"></span><b> Related Blogs </b><span class="glyphicon glyphicon-tower custom-glyphicon-icon"></span></h3>
                         <div class="row blog-card-row">
                             <div class="col-sm-4 blog-card">
                                 <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
@@ -219,7 +219,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/home-page.js"></script>
 <script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/custom-header-footer.js"></script>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
