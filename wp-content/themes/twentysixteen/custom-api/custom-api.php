@@ -52,6 +52,10 @@ function get_user_data(){
         $response_message   =   'success';
         $data               =   $get_data;
         $message            =   'Existing User';
+    }else{
+        $response_message   =   'Failed';
+        $data               =   '';
+        $message            =   'No User Found';
     }
 
     return  [
@@ -67,7 +71,9 @@ function create_update_data(){
     $lname                      =   $_POST['LastName']?$_POST['LastName']:'';
     $phone                      =   $_POST['Phone']?$_POST['Phone']:'';
     $new_phone                  =   $_POST['NewPhone']?$_POST['NewPhone']:'';
-    $email                      =   $_POST['Email']?$_POST['Email']:'No Email Added';
+    $gender                     =   $_POST['Gender']?$_POST['Gender']:'No Email Added';
+    $dob                        =   $_POST['Dob']?$_POST['Dob']:'';
+    $email                      =   $_POST['Email']?$_POST['Email']:'';
     $address                    =   $_POST['Address']?$_POST['Address']:'';
     $operation_type             =   $_POST['Operation']?$_POST['Operation']:'';
 
@@ -76,19 +82,33 @@ function create_update_data(){
     if($find_flag){
         if($operation_type == 'update'){
             if($new_phone != ''){
-                $update_data            =   $wpdb->query("UPDATE wp_create_update_user_data SET `first_name` = '$fname', `last_name` = '$lname', `phone` = '$new_phone', `email` = '$email', `address` = '$address' WHERE `phone` = '$phone'");
-    
+                $update_data            =   $wpdb->query("UPDATE wp_create_update_user_data SET `first_name` = '$fname', `last_name` = '$lname', `dob` = '$dob', `gender` = '$gender', `phone` = '$new_phone', `email` = '$email', `address` = '$address' WHERE `phone` = '$phone'");
+                
+                if($update_data){
+                    // echo "updated";
+                    $response["statusCode"] = "200";
+                    $response["text"]       = "Record Updatated Sucessfully"; 
+                }else{
+                    // echo "not updated";
+                    $response["statusCode"] = "201";
+                    $response["text"]       = "This Mobile number is already registerd.";
+                }
+
             }else{
-                $update_data            =   $wpdb->query("UPDATE wp_create_update_user_data SET `first_name` = '$fname', `last_name` = '$lname', `email` = '$email', `address` = '$address' WHERE `phone` = '$phone'");
+                $update_data            =   $wpdb->query("UPDATE wp_create_update_user_data SET `first_name` = '$fname', `last_name` = '$lname', `dob` = '$dob', `gender` = '$gender', `email` = '$email', `address` = '$address' WHERE `phone` = '$phone'");
+                
+                if($update_data){
+                    // echo "updated";
+                    $response["statusCode"] = "200";
+                    $response["text"]       = "Record Updatated Sucessfully"; 
+                }else{
+                    // echo "not updated";
+                    $response["statusCode"] = "201";
+                    $response["text"]       = "Updation Failed";
+                }
+
             }
-           
-            if($update_data){
-                $response["statusCode"] = "200";
-                $response["text"]       = "Record Updatated Sucessfully"; 
-            }else{
-                $response["statusCode"] = "201";
-                $response["text"]       = "Updation Failed";
-            }
+
         }else if($operation_type == 'insert'){
             $response["statusCode"] = "201";
             $response["text"]       = "This phone number is already registered.";
@@ -97,7 +117,7 @@ function create_update_data(){
             $response["text"]       = "Something went wrong";
         }
     }else{
-        $insert_data    =   $wpdb->query($wpdb->prepare("INSERT INTO wp_create_update_user_data(`first_name`,`last_name`,`phone`,`email`,`address`) VALUES('$fname', '$lname', '$phone', '$email', '$address')"));
+        $insert_data    =   $wpdb->query($wpdb->prepare("INSERT INTO wp_create_update_user_data(`first_name`,`last_name`,`dob`,`gender`,`phone`,`email`,`address`) VALUES('$fname', '$lname', '$dob', '$gender', '$phone', '$email', '$address')"));
         if($insert_data){
             $response["statusCode"] = "200";
             $response["text"]       = "Record Inserted Sucessfully"; 

@@ -113,6 +113,23 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group name-form-group" data-name-field="">
+                                            <div><label>Date Of Birth</label><span class="required-asterisk">*</span></div>
+                                            <input id="userDob" name="user-dob" class="form-control" type="date" onchange="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','DOB')" onblur="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','DOB')" value="" autocomplete="off" required="required" sign-up-dob-input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group name-form-group" data-name-field="">
+                                            <div><label>Gender</label><span class="required-asterisk">*</span></div>
+                                            <select id="userGender" name="user-gender" class="form-control" type="dropdown" onchange="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','Gender')" onblur="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','Gender')" required="required" data-user-gender>
+                                                <option value="" disabled selected>Select your gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="others">Others</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group name-form-group" data-name-field="">
                                             <div><label>Phone</label><span class="required-asterisk">*</span></div>
                                             <input id="userPhone" name="user-phone" class="form-control" type="tel" pattern="[789][0-9]{9}" placeholder="Phone No." onchange="CUSTOM_FUNCTIONS.phoneValidation(this)" onblur="CUSTOM_FUNCTIONS.phoneValidation(this)" value="" autocomplete="off" maxlength="10" required="required" sign-up-phone-input>
                                         </div>
@@ -160,13 +177,26 @@
                             <label>Last Name:</label>
                             <input type="text" name="user-info-lname" class="form-control user-info-input user-info-p user-info-lname" readonly="readonly" onchange="CUSTOM_FUNCTIONS.nameValidation(this)" onblur="CUSTOM_FUNCTIONS.nameValidation(this)">
                         </div>
+                        <div class="col-sm-6 profile-field">
+                                <label>Date Of Birth:</label>
+                                <input id="userDob" name="user-info-dob" class="form-control user-info-input user-info-p user-info-dob" type="date" readonly="readonly" onchange="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','DOB')" onblur="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','DOB')" value="" autocomplete="off" required="required" sign-up-dob-input>
+                        </div>
+                        <div class="col-sm-6 profile-field">
+                            <label>Gender:</label>
+                            <select id="user-gender" name="user-info-gender" class="form-control user-info-input user-info-p user-info-gender" type="dropdown" readonly="readonly" onchange="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','Gender')" onblur="CUSTOM_FUNCTIONS.basicRequiredValidation(this,'','Gender')" required="required" data-user-gender>
+                                <option value="" disabled>Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
                         <div class="col-sm-12 profile-field">
                             <label>Contact Number:</label>&nbsp;<button type="button" class="btn mob-no-change hidden">Change<span class="glyphicon glyphicon-pencil"></span></button>
                             <input type="tel" name="user-info-phone" class="form-control user-info-p user-info-phone" readonly="readonly" onchange="CUSTOM_FUNCTIONS.phoneValidation(this)" onblur="CUSTOM_FUNCTIONS.phoneValidation(this)" maxlength="10">
                         </div>
                         <div class="col-sm-12 profile-field new-phone-field hidden">
                             <label>Add New Phone Number:</label>
-                            <input type="tel" name="user-info-new-phone" class="form-control user-info-input user-info-new-phone" onchange="CUSTOM_FUNCTIONS.optionalPhoneValidation(this,'true')" onblur="CUSTOM_FUNCTIONS.optionalPhoneValidation(this,'true')" maxlength="10">
+                            <input type="tel" name="user-info-new-phone" class="form-control user-info-input user-info-new-phone" onchange="CUSTOM_FUNCTIONS.optionalPhoneValidation(this,'true')" onblur="CUSTOM_FUNCTIONS.optionalPhoneValidation(this,'true')" maxlength="10" replace-new-number>
                         </div>
                         <div class="col-sm-12 profile-field">
                             <label>Email:</label>

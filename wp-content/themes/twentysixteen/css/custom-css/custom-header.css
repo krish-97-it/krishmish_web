@@ -182,6 +182,19 @@
     background-color: transparent;
     opacity: 1;
 }
+.swal2-title{
+    color:red;
+}
+.swal2-title-success{
+    color:Black;
+    padding-bottom: 20px;
+}
+.swal2-html-container{
+    font-size: 12px !important;
+}
+.swal2-confirm{
+    font-size: 12px !important;
+}
 @media(min-width:767.98px){
     .nav-mob-title{
         /* display: none; */

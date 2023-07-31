@@ -162,6 +162,8 @@ jQuery(document).ready(function(){
     var data_login_btn              =   jQuery('[data-login-btn]');
     var user_firstname              =   jQuery('[name="user-firstname"]');
     var user_lastname               =   jQuery('[name="user-lastname"]');
+    var user_dob                    =   jQuery('[name="user-dob"]');
+    var user_gender                 =   jQuery('[name="user-gender"]');
     var user_email                  =   jQuery('[name="user-email"]');
     var user_phone                  =   jQuery('[name="user-phone"]');
     var u_phone                     =   jQuery('[name="existinguser-phone"]');
@@ -248,6 +250,7 @@ jQuery(document).ready(function(){
         jQuery('.useer-info-phone').attr('readonly',true);
         jQuery('.save-edit-btn').removeClass('hidden');
         jQuery('.mob-no-change').removeClass('hidden');
+        editBtn_ClickFlag = "1";
     })
 
     // on click of change to enable input for new phone number
@@ -258,7 +261,6 @@ jQuery(document).ready(function(){
     // Update edited record
     jQuery('.save-edit-btn').click(function(){
         updateUserProfile();
-        editBtn_ClickFlag = 1;
     })
 
     //Auto Save 
@@ -289,6 +291,8 @@ jQuery(document).ready(function(){
                 "LastName"      :   user_lastname.val(),
                 "Phone"         :   user_phone.val(),
                 "NewPhone"      :   '',
+                "Gender"        :   user_gender.val(),
+                "Dob"           :   user_dob.val(),
                 "Email"         :   user_email.val(),
                 "Address"       :   user_address.val(),
                 "Operation"     :   'insert'
@@ -301,7 +305,7 @@ jQuery(document).ready(function(){
                     setCookie('registeredUser@KrishMish',cookie_value, 1);
                     location.reload();
                 }else{
-                    jQuery(sign_up_phone_input).after('<div class="input-error-msg">User not found.Try with some other number or create a new account</div>');
+                    jQuery(sign_up_phone_input).after('<div class="input-error-msg">Mobile number is already registered.</div>');
                     jQuery(sign_up_phone_input).addClass('input-error').removeClass('input-valid');
                 }
             },
@@ -324,6 +328,8 @@ jQuery(document).ready(function(){
                     var reg_user_fname       =   response.data[0].first_name;
                     var reg_user_lname       =   response.data[0].last_name;
                     var reg_user_phone       =   response.data[0].phone;
+                    var reg_user_dob         =   response.data[0].dob;
+                    var reg_user_gender      =   response.data[0].gender;
                     var reg_user_email       =   response.data[0].email;
                     var reg_user_address     =   response.data[0].address;
                
@@ -333,6 +339,17 @@ jQuery(document).ready(function(){
                     jQuery('.user-info-fname').val(reg_user_fname);
                     jQuery('.user-info-lname').val(reg_user_lname);
                     jQuery('.user-info-phone').val(reg_user_phone);
+                    jQuery('.user-info-dob').val(reg_user_dob);
+                    console.log(reg_user_gender)
+
+                    jQuery('#user-gender option').each(function(){
+                        var gender_opt      =   jQuery(this).val();
+                        if(gender_opt == reg_user_gender){
+                            jQuery(this).attr('selected','selected');
+                        }
+                    });
+
+                    // jQuery('[name="user-info-gender"]').selectize()[0].selectize.setValue(reg_user_gender);
                     jQuery('.user-info-email').val(reg_user_email);
                     jQuery('.user-info-address').val(reg_user_address);
 
@@ -358,6 +375,8 @@ jQuery(document).ready(function(){
         var user_firstname      =   jQuery('[name="user-info-fname"]');
         var user_lastname       =   jQuery('[name="user-info-lname"]');
         var user_email          =   jQuery('[name="user-info-email"]');
+        var user_gender         =   jQuery('[name="user-info-gender"]');
+        var user_dob            =   jQuery('[name="user-info-dob"]');
         var user_phone          =   jQuery('[name="user-info-phone"]');
         var user_address        =   jQuery('[name="user-info-address"]');
 
@@ -378,6 +397,8 @@ jQuery(document).ready(function(){
                     "LastName"      :   user_lastname.val(),
                     "Phone"         :   user_phone.val(),
                     "NewPhone"      :   phone_val,
+                    "Dob"           :   user_dob.val(),
+                    "Gender"        :   user_gender.val(),
                     "Email"         :   user_email.val(),
                     "Address"       :   user_address.val(),
                     "Operation"     :   'update'
@@ -389,8 +410,34 @@ jQuery(document).ready(function(){
                         if(phone_val != ''){
                             setCookie('registeredUser@KrishMish','',0);
                         }
-
-                        location.reload();
+                        jQuery('.swal')
+                        Swal.fire({
+                            customClass : {
+                                title: 'swal2-title swal2-title-success'
+                            },
+                            title: 'Profile Updated Successfully',
+                            icon: 'success',
+                            timer: 1500,
+                            showConfirmButton: false,
+                        }).then((result) => {
+                            location.reload();
+                        })
+                    }else{
+                        if(phone_val != ''){
+                            jQuery('[replace-new-number]').after('<div class="input-error-msg">'+response.text+'</div>');
+                            jQuery('[sign_up_phone_input]').addClass('input-error').removeClass('input-valid');
+                        }else{
+                            Swal.fire({
+                                title: 'Updation Failed!!',
+                                icon: 'warning',
+                                html: 'Something Went wrong<br><b>Or</b><br>No New Data to Update',
+                                confirmButtonText: 'Close',
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            })
+                        }
                     }
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown){
@@ -405,6 +452,8 @@ jQuery(document).ready(function(){
                                 CUSTOM_FUNCTIONS.nameValidation(user_firstname) &&
                                 CUSTOM_FUNCTIONS.nameValidation(user_lastname) &&
                                 CUSTOM_FUNCTIONS.emailValidation(user_email,'true') &&
+                                CUSTOM_FUNCTIONS.basicRequiredValidation(user_gender, '', 'Gender') &&
+                                CUSTOM_FUNCTIONS.basicRequiredValidation(user_dob, '', 'DOB') &&
                                 CUSTOM_FUNCTIONS.basicRequiredValidation(user_address, '', 'Address') &&
                                 CUSTOM_FUNCTIONS.phoneValidation(user_phone, '', 'Phone No.')&&
                                 CUSTOM_FUNCTIONS.optionalPhoneValidation(new_user_phone,'true',);
@@ -413,6 +462,8 @@ jQuery(document).ready(function(){
                 CUSTOM_FUNCTIONS.nameValidation(user_firstname);
                 CUSTOM_FUNCTIONS.nameValidation(user_lastname);
                 CUSTOM_FUNCTIONS.emailValidation(user_email,'true');
+                CUSTOM_FUNCTIONS.basicRequiredValidation(user_gender, '', 'Gender');
+                CUSTOM_FUNCTIONS.basicRequiredValidation(user_dob, '', 'DOB');
                 CUSTOM_FUNCTIONS.basicRequiredValidation(user_address, '', 'Address');
                 CUSTOM_FUNCTIONS.phoneValidation(user_phone, '', 'Phone No.');
                 CUSTOM_FUNCTIONS.optionalPhoneValidation(new_user_phone,'true');
@@ -428,6 +479,8 @@ jQuery(document).ready(function(){
                             CUSTOM_FUNCTIONS.nameValidation(user_firstname) &&
                             CUSTOM_FUNCTIONS.nameValidation(user_lastname) &&
                             CUSTOM_FUNCTIONS.emailValidation(user_email,'true') &&
+                            CUSTOM_FUNCTIONS.basicRequiredValidation(user_gender, '', 'Gender') &&
+                            CUSTOM_FUNCTIONS.basicRequiredValidation(user_dob, '', 'DOB') &&
                             CUSTOM_FUNCTIONS.basicRequiredValidation(user_address, '', 'Address') &&
                             CUSTOM_FUNCTIONS.phoneValidation(user_phone, '', 'Phone No.');
                             
@@ -435,6 +488,8 @@ jQuery(document).ready(function(){
             CUSTOM_FUNCTIONS.nameValidation(user_firstname);
             CUSTOM_FUNCTIONS.nameValidation(user_lastname);
             CUSTOM_FUNCTIONS.emailValidation(user_email,'true');
+            CUSTOM_FUNCTIONS.basicRequiredValidation(user_gender, '', 'Gender');
+            CUSTOM_FUNCTIONS.basicRequiredValidation(user_dob, '', 'DOB');
             CUSTOM_FUNCTIONS.basicRequiredValidation(user_address, '', 'Address');
             CUSTOM_FUNCTIONS.phoneValidation(user_phone, '', 'Phone No.');
         } 
