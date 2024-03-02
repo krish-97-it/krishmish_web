@@ -27,7 +27,10 @@
         <?php endif; ?>
     </head>
     <body <?php body_class(); ?>>
-        <?php get_header('custom');?>
+        <?php 
+        // get_header('custom');
+            get_header();
+        ?>
         
         <main>
             <div class="container-fluid" style="margin-top:50px">
@@ -39,7 +42,9 @@
             </div>
         </main>
 
-        <?php get_footer('custom'); ?>
+        <?php 
+        // get_footer('custom');
+        get_footer(); ?>
     <body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

@@ -6,16 +6,21 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+
+ global $post;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<!-- <header class="entry-header"> -->
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<!-- </header>.entry-header -->
 
 	<?php twentysixteen_excerpt(); ?>
 
-	<?php twentysixteen_post_thumbnail(); ?>
+	<?php 
+		$featured_img_desktop	=	getPostFeaturedImage($post->ID);
+	?>
+	<img src="<?=$featured_img_desktop?>" class="post-featured-image-desktop" height="auto" width="100%">
 
 	<div class="entry-content">
 		<?php
@@ -39,7 +44,7 @@
 			?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
 		<?php
 			edit_post_link(
@@ -52,5 +57,6 @@
 				'</span>'
 			);
 			?>
-	</footer><!-- .entry-footer -->
+	</footer> -->
+	<!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
