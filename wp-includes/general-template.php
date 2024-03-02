@@ -40,7 +40,7 @@ function get_header( $name = null, $args = array() ) {
 	$templates = array();
 	$name      = (string) $name;
 	if ( '' !== $name ) {
-		$templates[] = "{$name}-header.php";
+		$templates[] = "header-{$name}.php";
 	}
 
 	$templates[] = 'header.php';

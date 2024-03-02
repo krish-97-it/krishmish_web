@@ -600,27 +600,15 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
 
-function addBootstrapSyleSheet(){
-	echo  '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">';
-	echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">';
-}
-add_action('wp_head', 'addBootstrapScripts');
-
-// function krishmish_website_scripts() {
-// 	$file_version	= 1.0;
-// 	// Font Family Load
-// 	wp_enqueue_style( 'font-family', 'https://fonts.googleapis.com/css?family=Poppins', array(), $file_version);
-	
-// 	// header and footer custom css file include
-// 	wp_enqueue_style( 'custom-header', get_stylesheet_uri().'css/custom-css/custom-header.css', array(), $file_version);
-// 	wp_enqueue_style( 'custom-footer', get_stylesheet_uri().'css/custom-css/custom-footer.css', array(), $file_version);
-
-// 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js', array(), null, true);
-//     wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), null, true);
-//     wp_enqueue_script('home-page', get_template_directory_uri() . '/js/custom-js/home-page.js', array(), $file_version, true);
-// 	wp_enqueue_script('custom-header-footer-js', get_template_directory_uri() . '/js/custom-js/custom-header-footer.js', array(), $file_version, true);
+// function addcustomStyle(){
+// 	echo '<link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/first-blog.css">';
 // }
-// add_action( 'wp_enqueue_scripts', 'krishmish_website_style');
+// add_action('wp_head','addcustomStyle');
+
+// function addcustomScript(){
+// 	echo '<script type="text/javascript" src="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/js/custom-js/first-blog.js"></script>';
+// }
+// add_action('wp_head','addcustomScript');
 
 
 // Get the post of the category
