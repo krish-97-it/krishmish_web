@@ -6,9 +6,9 @@
     $get_file_directory     =   get_stylesheet_directory_uri();
     $feature_img            =   getPostFeaturedImage($post_id); 
     $content                =   get_the_excerpt($post_id);
-    $seo_content            =   get_custom_seo_content();
-    $custom_meta_title      =   $seo_content['title'] ? $seo_content['title'] : '';
-    $custom_meta_desc       =   $seo_content['desc'] ? $seo_content['desc'] : '';
+    $seo_content            =   get_custom_seo_content($post_id);
+    $custom_meta_title      =   $seo_content['meta_title'] ? $seo_content['meta_title'] : '';
+    $custom_meta_desc       =   $seo_content['meta_description'] ? $seo_content['meta_description'] : '';
     $title                  =   '';
     $meta_image             =   '';
     $meta_type              =   '';
@@ -128,11 +128,6 @@
 
         <?php wp_head() ?>
         
-        <!-- home page custom css file include-->
-        <!-- <link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/custom-header.css"> -->
-        <!-- <link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/custom-footer.css"> -->
-        <!-- <link rel="stylesheet" href="http://localhost/wordpress-basics-learning/wp-content/themes/twentysixteen/css/custom-css/home-page.css"> -->
-
         <!-- Adding GTM Script -->
         <!-- <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PD6JDHC"></script>
         <script>
