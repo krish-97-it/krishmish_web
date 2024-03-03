@@ -1,0 +1,21 @@
+/*
+Theme Name: krishmish-static-content
+Theme URI: 
+Author: Krishnendu
+Author URI: 
+Description: This file is a starter file for our Theme. It is simple and easy to customize. It can be used for any staic content Website
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog, block-patterns
+Text Domain:
+*/
+
+*{
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #f9f9f9;
+    font-family: Helvetica;
+}
