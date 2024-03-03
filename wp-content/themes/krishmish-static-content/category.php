@@ -15,6 +15,10 @@ $cat_posts              =   get_category_posts($category->slug);
 
 $active_category        =   $category_name[$category_name_count-1];
 
+$top_banner_desktop     =  '' ;
+$top_banner_mob         =  '';
+
+
 global $post;
 
 get_header();
@@ -25,7 +29,7 @@ get_header();
 
             <!-- top banner section -->
             <div class="col-md-12" style="margin-top:30px">
-                <a class="bmc-custom-banner-redirection" href="<?php echo "https://byjus.com/user_country/math/?device=device_type&utm_source=bmc_blog&utm_medium=top_banner&utm_campaign=beyond_tutoring_bmc&utm_term=".urlencode('//'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>" banner-medium="top-banner-click">
+                <a class="bmc-custom-banner-redirection" href="#" banner-medium="top-banner-click">
                     <picture>
                         <source media="(max-width: 767.98px)" srcset="<?=$mob_img?>"/>
                         <source media="(min-width: 768px)" srcset="<?=$desktop_img?>"/>

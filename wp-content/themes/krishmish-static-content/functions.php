@@ -364,8 +364,9 @@ function getCountryCode(){
     return 'US';
 }
 
-function get_custom_seo_content(){
-
+function get_custom_seo_content($post_id){
+   $get_custom_field_data   =   get_fields($post_id);
+   return $get_custom_field_data;
 }
 
 function getArticleSchema($post_id, $type){
@@ -373,7 +374,7 @@ function getArticleSchema($post_id, $type){
     $current_page_url       =   getCurrentPageurl(1,1);
     $feature_img            =   getPostFeaturedImage($post_id);
     $content                =   get_the_excerpt($post_id);
-    $seo_content            =   get_custom_seo_content();
+    $seo_content            =   get_custom_seo_content($post_id);
     $custom_title           =   $seo_content['title'] ? $seo_content['title'] : '';
     $custom_desc            =   $seo_content['desc'] ? $seo_content['desc'] : '';
     $title                  =   $custom_title ? $custom_title : get_the_title();
