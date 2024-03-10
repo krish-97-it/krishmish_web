@@ -18,6 +18,9 @@
     color: rgb(204, 191, 13);
     /* text-decoration: underline; */
 }
+.navbar-toggle{
+    margin-right: 10px !important;
+}
 
 .dropdown-submenu {
     position: relative;

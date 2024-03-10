@@ -1,11 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
-#main-content{
-    min-height: 70vh;
-    background-image: url('http://localwww.krishmish.com/wp-content/uploads/2023/07/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall-2.jpg');
-    color: white;
-}
 .footer-container{
     padding-bottom: 20px;
 }
@@ -94,9 +89,6 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
 }
 
  @media(max-width:767.98px){
-    #main-content{
-        min-height: 45vh;
-    }
     .footer-col {text-align: center;}
     .footer-social{
         justify-content: center;

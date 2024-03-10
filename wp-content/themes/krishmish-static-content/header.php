@@ -1,6 +1,7 @@
 <?php
     global $post;
     $current_page_url       =   getCurrentPageurl(1,1);
+	$base_url				=	baseUrl();
     $slug_name              =   trim(parse_url($current_page_url, PHP_URL_PATH),'/');
     $post_id                =   (isset($post->ID)) ? $post->ID : 0;
     $get_file_directory     =   get_stylesheet_directory_uri();
@@ -14,25 +15,7 @@
     $meta_type              =   '';
     $meta_description       =   '';
     $version                =   '2.0';
-    $ipdat                  =   @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip));
-    $country_name           =   $ipdat->geoplugin_countryName;
-    $user_country_code      =   $ipdat->geoplugin_countryCode;
     $schema_type            =   '';
-
-    $country_code           =   '';
-    if($country_code == 'UK' || $country_code == 'GB'){
-        $logo_href      =   "https://byjus.com/uk/math/";
-        $country        =   "uk";
-        $data_href      =   "https://byjus.com/uk/math/?device=device_type&utm_source=UK_Home&utm_medium=top_navbar&utm_campaign=beyond_tutoring_bmc&utm_term=".urlencode('//'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-    }else if($country_code == 'AU' || $country_code == 'NZ'){
-        $logo_href      =   "https://byjus.com/au/math/";
-        $country        =   "au";
-        $data_href      =   "https://byjus.com/au/math/?device=device_type&utm_source=AU_Home&utm_medium=top_navbar&utm_campaign=beyond_tutoring_bmc&utm_term=".urlencode('//'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-    }else{
-        $logo_href      =   "https://byjus.com/us/math/";
-        $country        =   "us";
-        $data_href      =   "https://byjus.com/us/math/?device=device_type&utm_source=bmc_blog&utm_medium=top_navbar&utm_campaign=beyond_tutoring_bmc&utm_term=".urlencode('//'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-    }
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -166,50 +149,50 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="http://localhost/wordpress-basics-learning/">
-						<img alt="Brand" src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/shop-logo-one-1-e1689796889309.jpg" height="50px" width="50px">
+					<a class="navbar-brand" href="<?=$base_url?>">
+						<img alt="Brand" src="<?=$base_url?>/wp-content/uploads/2023/07/shop-logo-one-1-e1689796889309.jpg" height="50px" width="50px">
 					</a>
 					<div class="nav-mob-title">KrishMish</div>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class=""><a href="http://localwww.krishmish.com/">Home</a></li>
-					<li><a href="/menu-card/">Menu Card</a></li>
+					<li class=""><a href="<?=$base_url?>">Home</a></li>
+					<li><a href="<?=$base_url?>/menu-card/">Menu Card</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
+						<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/resturant/">Resturant & Cafe</a></li>
-							<li><a href="/Cattering/">Cattering</a></li>
-							<li><a href="/home-delivery/">Home Delivery</a></li>
+							<li><a href="<?=$base_url?>/resturant-and-cafe/">Resturant & Cafe</a></li>
+							<li><a href="<?=$base_url?>/cattering/">Cattering</a></li>
+							<li><a href="<?=$base_url?>/home-delivery/">Home Delivery</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exclusive<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Blogs</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Reviews</a></li>
-							<li><a href="#">FAQ</a></li>
+							<li><a href="<?=$base_url?>/blogs/">Blogs</a></li>
+							<li><a href="<?=$base_url?>/gallery/">Gallery</a></li>
+							<li><a href="<?=$base_url?>/reviews/">Reviews</a></li>
+							<li><a href="<?=$base_url?>/faq/">FAQ</a></li>
 							<li role="separator" class="divider"></li>
 							<!-- <li class="dropdown-header">Other</li> -->
 							<li class="dropdown-submenu">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Our Journey</a></li>
-									<li><a href="#">Our Partners</a></li>
+									<li><a href="<?=$base_url?>/our-journey/">Our Journey</a></li>
+									<li><a href="<?=$base_url?>/our-partners/">Our Partners</a></li>
 								</ul>
 							</li>
 							<li class="dropdown-submenu">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Join Us</a>
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Join Us</a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Carrer</a></li>
-									<li><a href="#">Buisness</a></li>
-									<li><a href="#">Donate A Meal</a></li>
+									<li><a href="<?=$base_url?>/carrer/">Carrer</a></li>
+									<li><a href="<?=$base_url?>/buisness/">Buisness</a></li>
+									<li><a href="<?=$base_url?>/donate-meal/">Donate A Meal</a></li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li><a href="http://localwww.krishmish.com/contact-us/">Contact Us</a></li>
+					<li><a href="<?=$base_url?>/contact-us/">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right dynamic-navbar-right-data">
 					<!-- <li><a href="#" data-toggle="modal" data-target="#signUpModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
