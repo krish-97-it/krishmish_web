@@ -1,4 +1,5 @@
-<div id="myCarousel" class="carousel component-carousel slide" data-ride="carousel">
+<div id="myCarousel" class="col-md-12 carousel component-carousel slide col-padding-style  customer-review-section" data-ride="carousel">
+    <h3 class="related-blog-h"><span class="glyphicon glyphicon-heart custom-glyphicon-icon"></span><b> Customer Reviews </b><span class="glyphicon glyphicon-heart custom-glyphicon-icon"></span></h3>
     <!-- Carousel indicators -->
     <ol class="carousel-indicators component-carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

@@ -121,10 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-padding-style  customer-review-section">
-                    <h3 class="related-blog-h"><span class="glyphicon glyphicon-heart custom-glyphicon-icon"></span><b> Customer Reviews </b><span class="glyphicon glyphicon-heart custom-glyphicon-icon"></span></h3>
-                    <?php require 'components/carousel/review-carousel.php'; ?>
-                </div>
+                <?php require 'components/carousel/review-carousel.php'; ?>
                 <div class="col-md-12 col-padding-style  content-banner-section content-banner-section-mob">
                     <div class="row content-banner-row">
                         <div class="col-sm-12 home-content-banner home-promo-banner-two">
