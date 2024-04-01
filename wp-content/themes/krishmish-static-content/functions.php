@@ -20,15 +20,16 @@ add_action( 'wp_enqueue_scripts', 'krishmish_custom_css_js');
 function krishmish_custom_css_js() {
    $version   =   1.0;
    // css files
-   wp_enqueue_style( 'style',  get_template_directory_uri(). '/style.css', array(), $version );
+    wp_enqueue_style( 'style',  get_template_directory_uri(). '/style.css', array(), $version );
 	wp_enqueue_style( 'custom-header', get_template_directory_uri().'/css/custom-css/custom-header.css', array(), $version);
 	wp_enqueue_style( 'custom-footer', get_template_directory_uri().'/css/custom-css/custom-footer.css', array(), $version);
-   wp_enqueue_style('',get_template_directory_uri().'/css/custom-css/home-page.css', array(), $version);
+    wp_enqueue_style('home-page-style',get_template_directory_uri().'/css/home-page.css', array(), $version);
+    wp_enqueue_style( 'components-style', get_template_directory_uri().'/css/components.css', array(), $version);
 
-   // js files
-   wp_enqueue_script('custom', get_template_directory_uri().'/js/custom-js/custom.js', array(), $version, true);
-   wp_enqueue_script('home-page', get_template_directory_uri().'/js/custom-js/home-page.js', array(), $version, true);
-	wp_enqueue_script('custom-header-footer',  get_template_directory_uri().'/js/custom-js/custom-header-footer.js', array(), $version, true);
+    // js files
+    wp_enqueue_script('custom', get_template_directory_uri().'/js/custom-js/all.js', array(), $version, true);
+    wp_enqueue_script('home-page', get_template_directory_uri().'/js/custom-js/home-page.js', array(), $version, true);
+    wp_enqueue_script('custom-header-footer',  get_template_directory_uri().'/js/custom-js/custom-header-footer.js', array(), $version, true);
 }
 
 // function add_js_in_footer() {
@@ -360,6 +361,16 @@ function getCurrentPageurl($without_query_param=1, $remove_pagination=0){
     return $current_url;
 }
 
+function baseUrl(){
+    if(isset($_SERVER['HTTPS'])){
+        $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+    }
+    else{
+        $protocol = 'http';
+    }
+    return $protocol . "://" . $_SERVER['HTTP_HOST'];
+}
+
 function getCountryCode(){
     return 'US';
 }
@@ -524,4 +535,4 @@ function  getGeneralInfoSchema(){
         </script>';
 }
 
-// require get_theme_file_path('/custom-api/custom-api.php');
+require get_theme_file_path('/custom-api/custom-api.php');
