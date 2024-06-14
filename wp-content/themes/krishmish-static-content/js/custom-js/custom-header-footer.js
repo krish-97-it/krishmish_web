@@ -334,7 +334,7 @@ jQuery(document).ready(function(){
                     var reg_user_address     =   response.data[0].address;
                
                     jQuery('.dynamic-navbar-right-data').empty();
-                    jQuery('.dynamic-navbar-right-data').append('<li><a class="registered-user-name" data-toggle="modal" data-target="#regUserProfile"><span class="glyphicon glyphicon-user"></span> &nbsp'+ reg_user_fname+'</a></li>');
+                    jQuery('.dynamic-navbar-right-data').append('<li><a class="registered-user-name" data-toggle="modal" data-target="#regUserProfile"><span class="glyphicon glyphicon-user"></span><span class="get-user-name"> &nbsp'+ reg_user_fname+'</span></a></li>');
                     jQuery('.blink-heading').html('Hello '+reg_user_fname+'!!');
                     jQuery('.user-info-fname').val(reg_user_fname);
                     jQuery('.user-info-lname').val(reg_user_lname);

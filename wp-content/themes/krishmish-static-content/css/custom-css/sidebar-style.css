@@ -1,0 +1,9 @@
+.search-widget-body{
+    display: flex;
+}
+.km-search-btn{
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    color: white !important;
+    background-image: linear-gradient(to right, #753a0d 0%, #005842 100%);
+}

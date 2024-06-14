@@ -157,7 +157,7 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li class=""><a href="<?=$base_url?>">Home</a></li>
-					<li><a href="<?=$base_url?>/menu-card/">Menu Card</a></li>
+					<li><a href="<?=$base_url?>/menu-card/">Order</a></li>
 					<li class="dropdown">
 						<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -196,7 +196,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right dynamic-navbar-right-data">
 					<!-- <li><a href="#" data-toggle="modal" data-target="#signUpModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-					<li><a class="log-in-txt"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a class="log-in-txt"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
 				</ul>
 				</div>
 			</div>

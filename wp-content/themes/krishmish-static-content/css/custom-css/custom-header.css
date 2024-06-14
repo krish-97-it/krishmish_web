@@ -76,7 +76,6 @@
 .navbar-default .navbar-nav>li>a:hover{
     color: rgb(204, 191, 13) !important;
 }
-
 .input-error-msg, .required-asterisk{
     color: red;
 }
@@ -198,7 +197,7 @@
 .swal2-confirm{
     font-size: 12px !important;
 }
-@media(min-width:767.98px){
+@media(min-width:768px){
     .nav-mob-title{
         /* display: none; */
         float: right;
@@ -209,6 +208,9 @@
         padding: 14px 0px 13px;
         padding-right: 7px;
         font-family: cursive;
+    }
+    .get-user-name{
+        display: none;
     }
 }
 @media(max-width:767.98px){

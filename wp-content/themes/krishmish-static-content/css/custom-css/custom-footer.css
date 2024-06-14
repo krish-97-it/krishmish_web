@@ -7,6 +7,10 @@
 .logofooter{
     padding-top: 13px;
 }
+.brand-logo-footer{
+    height: 100px !important;
+    width: 100px !important;
+}
 .footer-intro{
     padding-top:4px;
     padding-bottom: 12px;

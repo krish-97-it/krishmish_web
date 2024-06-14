@@ -23,7 +23,8 @@ function krishmish_custom_css_js() {
     wp_enqueue_style( 'style',  get_template_directory_uri(). '/style.css', array(), $version );
 	wp_enqueue_style( 'custom-header', get_template_directory_uri().'/css/custom-css/custom-header.css', array(), $version);
 	wp_enqueue_style( 'custom-footer', get_template_directory_uri().'/css/custom-css/custom-footer.css', array(), $version);
-    wp_enqueue_style('home-page-style',get_template_directory_uri().'/css/home-page.css', array(), $version);
+    wp_enqueue_style('custom-sidebar',get_template_directory_uri().'/css/custom-css/sidebar-style.css', array(), $version);
+    wp_enqueue_style('home-page-style',get_template_directory_uri().'/css/custom-css/home-page.css', array(), $version);
     wp_enqueue_style( 'components-style', get_template_directory_uri().'/css/components.css', array(), $version);
 
     // js files

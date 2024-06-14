@@ -3,60 +3,51 @@
  * The template for displaying search results pages
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage KrishMish_Static_Content
+ * @since KrishMish_Static_Content 1.0
  */
 
-get_header(); ?>
+	get_header(); 
+?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main id="main-content-article" class="main-content-style article-page-main-content" style="margin-top:50px;" page-title="<?=$post_title_txt?>">
+    	<div class="container km-container-style">
+        	<div class="row">
+            	<div class="col-sm-8 col-md-9 col-p10-lr-mob">
+					<div class="km-bgc-white bfs-content-padding mb20">
+						<?php
+							$s=get_search_query();
+							$args = array(
+								's' =>$s
+							);
+							// The Query
+							$the_query = new WP_Query( $args );
+						?>
+							
+						<?php if ( $the_query->have_posts() ) { 
+							_e('<h2 class="article-heading">Search Results for: '.get_query_var('s').'</h2>');
+							while ( $the_query->have_posts() ){ ?>
+								<?php $the_query->the_post(); ?>
+								<p>
+									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								</p>
+							<?php }
+						}else{ ?>
+							<h1 style='font-weight:bold;color:#000'>Nothing Found</h1>
+							<div class="alert alert-info">
+								<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+							</div>
+						<?php } ?>
+					</div>
+				</div>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-				<?php
-				/* translators: %s: The search query. */
-				printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
-				?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
-			// Start the loop.
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-				// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination(
-				array(
-					'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-					'next_text'          => __( 'Next page', 'twentysixteen' ),
-					/* translators: Hidden accessibility text. */
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-				)
-			);
-
-			// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
-
-<?php get_sidebar(); ?>
+				<div class="col-sm-4 col-md-3" style="margin-top:20px">
+                	<?php get_sidebar() ?>
+            	</div>
+			<!-- .row -->
+			</div>
+		<!-- .container -->
+		</div>
+	<!-- .site-main -->
+	</main>
 <?php get_footer(); ?>

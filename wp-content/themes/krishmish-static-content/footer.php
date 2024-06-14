@@ -4,7 +4,7 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-6 footer-col logo-contact-info">
 						<div class="logofooter">
-							<img alt="Brand" src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/shop-logo-one-1-e1689796889309.jpg" height="100px" width="100px">
+							<img class="brand-logo-footer" alt="Brand" src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/shop-logo-one-1-e1689796889309.jpg" height="100px" width="100px">
 							<p class="footer-intro">KrishMish - A House of Taste, Fresh, Affordable Combos Of Food</p>
 						</div>
 						<div class="addressfooter">
@@ -50,11 +50,11 @@
 			<div class="copyright">
 				<div class="container">
 					<div class="col-md-6">
-					<p>© 2016 - All Rights with prabuuideveloper</p>
+					<p>© 2016 - All Rights with KrishMish</p>
 					</div>
 					<div class="col-md-6">
 						<ul class="bottom_ul">
-							<li><a href="#">prabuuideveloper.com</a></li>
+							<li><a href="#">www.krishmish.com</a></li>
 							<li><a href="#">About us</a></li>
 							<li><a href="#">Blog</a></li>
 							<li><a href="#">Faq's</a></li>

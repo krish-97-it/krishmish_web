@@ -49,7 +49,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    padding: 0px 10px;
+    padding: 0px 12px;
     box-shadow: rgb(67 133 69) 3px 3px 6px 0px inset, rgb(144 60 60 / 50%) -3px -3px 6px 1px inset;
 }
 .introduction-para{
@@ -116,6 +116,66 @@
 .custom-carousel-next{
     display: none;
 }
+.custom-flip-box {
+    background-color: transparent;
+    /* width: 300px; */
+    /* height: 200px; */
+    perspective: 1000px;
+}
+.custom-flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.custom-flip-box:hover .custom-flip-box-inner {
+    transform: rotateY(180deg);
+}
+.custom-flip-box-front {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.custom-flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 10px 25px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(35, 71, 65); */
+    background-image: linear-gradient(260deg, #0f0f0f, transparent, #111111, transparent);
+    color: white;
+    transform: rotateY(180deg);
+}
+.flip-box-card{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 24px;
+    margin: 0px 5px 2px 5px;
+}
+.flip-card-img{
+    height: auto;
+    width: 100%;
+    border-radius: 20%;
+}
+.card-logo{
+    background-image: linear-gradient(260deg, #0f0f0f, transparent, #111111, transparent);
+    padding: 25px 25px 15px 25px;
+    border-radius: 20%;
+}
+.service-section-row{
+    display: flex;
+}
 .card-heading{
     color: #a7ff9f;
     font-family: cursive;
@@ -123,7 +183,7 @@
 }
 .blog-card{
     text-align: center;
-    color: wheat;
+    color: white;
     font-weight: 600;
     background-image: linear-gradient(260deg, #0f0f0f, transparent, #111111, transparent);
     border-radius: 24px;
@@ -225,6 +285,9 @@
     .content-banner-section-mob{
         display: none;
     }
+    .hidden-on-desktop{
+        display: none;
+    }
 }
 @media(min-width:1199.98px){
     .check-order-menu-txt{
@@ -278,8 +341,8 @@
     .home-promo-banner-two-desktop{
         display: none;
     }
-    .content-banner-section-mob{
-        display: block;
+    .hidden-on-mob{
+        display: none;
     }
 
     /* Next & previous buttons */
@@ -290,7 +353,7 @@
         top: 50%;
         width: auto;
         padding: 16px;
-        margin-top: -22px;
+        margin-top: -50px;
         color: white;
         font-weight: bold;
         font-size: 18px;
@@ -317,6 +380,20 @@
     .service-section-card[target_ele="inactive"] {
         display: none !important;
     }
+    .service-section-row{
+        flex-direction: column;
+    }
+    .flip-box-card{
+        width: 50%;
+    }
+    .flip-box-card-m25{
+        margin-bottom: 15px;
+    }
+}
+@media(max-width:599.98px){
+    .flip-box-card{
+        width: 55%;
+    }
 }
 
 @media(max-width:484.98px){
@@ -329,12 +406,18 @@
     .check-order-menu-txt{
         font-size: 14px !important;
     }
+    .flip-box-card{
+        width: 64%;
+    }
 }
 @media(max-width:423.98px){
     .menu-redirect-btn{
         min-width: 155px;
         padding-left: 5px;
         padding-right: 5px;
+    }
+    .flip-box-card{
+        width: 80%;
     }
 }
 @media(max-width:373.98px){

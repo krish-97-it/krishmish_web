@@ -25,3 +25,42 @@ body {
 a, a:hover, a:focus{
     text-decoration: none;
 }
+
+img{
+    width: 100% !important;
+}
+.main-content-style{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.article-page-main-content{
+    background-color: #f9f9f9;
+    color: rgb(0, 0, 0);
+}
+
+.article-heading{
+    color: white;
+    /* background-image: linear-gradient(to right, #b42727 0%, #000000 51%, #007545 100%); */
+    background-image: linear-gradient(to right, #753a0d 0%, #000000 50%, #005842 100%);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+
+/* Progress CSS */
+.post-progress-bar{
+    /* background-color: #5322FF; */
+    background-image: linear-gradient(to right, #2ad7a2 0%, #146aaf 50%, #60c108 100%);
+    width: 0%;
+    height: 6px;
+}
+.progress-bar-row{
+    height: 5px;
+    /* top: 56px; */
+    position: fixed;
+    bottom: auto;
+    /* left: 0; */
+    background-color: white;
+    z-index: 1001;
+    width: 100%;
+}

@@ -66,30 +66,40 @@ $linkedin_share_link    =   "https://www.linkedin.com/shareArticle?mini=true&url
 get_header();
 ?>
 
-<main id="main-content" class="main-content-style article-page-main-content" style="margin-top:50px;" page-type="blogs" page-title="<?=$post_title_txt?>">
+<main id="main-content-article" class="main-content-style article-page-main-content" page-type="blogs" page-title="<?=$post_title_txt?>">
+    <!-- Progressive reading bar -->
+    <div class="container-fluid">
+        <div class="row progress-bar-row">
+            <div class="post-progress-bar" id="post-progress-bar"></div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <article class="article-full">
-                        <h2>
-                            <?php the_title(); ?>
-                        </h2>
-                        By: <?php the_author(); ?>
-                        <?php
-                            echo $post_feature_img;
-                        ?>
-                        <?php 
-                            the_content(); 
-                        ?>
-                    </article>
-                <?php endwhile; else : ?>
-                    <article>
-                        <p>Sorry, no post was found!</p>
-                    </article>
-                <?php endif; ?>
+            <div class="col-sm-8 col-md-9">
+                <div data-scroll-left>
+                    <div data-scroll-left-container>
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <article class="article-full">
+                                <h2 class="article-heading">
+                                    <?php the_title(); ?>
+                                </h2>
+                                By: <?php the_author(); ?>
+                                <?php
+                                    echo $post_feature_img;
+                                ?>
+                                <?php 
+                                    the_content(); 
+                                ?>
+                            </article>
+                        <?php endwhile; else : ?>
+                            <article>
+                                <p>Sorry, no post was found!</p>
+                            </article>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4" style="margin-top:20px;">
+            <div class="col-sm-4 col-md-3" style="margin-top:20px;">
                 <?php get_sidebar() ?>
             </div>
         </div>

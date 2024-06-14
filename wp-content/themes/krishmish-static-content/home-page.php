@@ -72,38 +72,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-padding-style  our-service-section">
+                <div class="col-md-12 col-padding-style our-service-section">
                     <h3 class="related-blog-h"><span class="glyphicon glyphicon-tower custom-glyphicon-icon"></span><b> Our Services </b><span class="glyphicon glyphicon-tower custom-glyphicon-icon"></span></h3>
-                    <div class="row blog-card-row service-section-row slideshow-container">
-                        <div class="col-sm-4 blog-card service-section-card mySlides-1" data-slide=1 target_ele="active">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
-                            <div class="card-body">
-                                <h4 class="card-heading">Resturant</h4>
-                                <p class="card-desc">The love we are getting from our customers is increasing day by day, We are happy to serve our delicious dishes from our all three oulets across two cities.</p>
-                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                    <div class="row blog-card-row service-section-row">
+                        <div class="col-sm-4 flip-box-card flip-box-card-m25">
+                            <div class="custom-flip-box">
+                                <div class="custom-flip-box-inner">
+                                    <div class="custom-flip-box-front card-logo">
+                                        <img src="/wp-content/uploads/2024/05/restaurant_background_fast_food_logo.webp" class="flip-card-img" alt="">
+                                        <h4 class="card-heading">Resturant</h4>
+                                    </div>
+                                    <div class="custom-flip-box-back card-body service-section-card">
+                                        <p class="card-desc">The love we are getting from our customers is increasing day by day, We are happy to serve our delicious dishes from our all three oulets across two cities.</p>
+                                        <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 blog-card service-section-card mySlides-2" data-slide=2 target_ele="inactive">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
-                            <div class="card-body">
-                                <h4 class="card-heading">Cattering</h4>
-                                <p class="card-desc">KrishMish offers cattering service for any kind of occassion. We have successfully served over 100+  happy customers with our variety of food.</p>
-                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                        <div class="col-sm-4 flip-box-card flip-box-card-m25">
+                            <div class="custom-flip-box">
+                                <div class="custom-flip-box-inner">
+                                    <div class="custom-flip-box-front card-logo">
+                                        <img src="/wp-content/uploads/2024/05/home_delivery_image.webp" class="flip-card-img" alt="">
+                                        <h4 class="card-heading">Home Delivery</h4>
+                                    </div>
+                                    <div class="custom-flip-box-back card-body service-section-card">
+                                        <p class="card-desc">The love we are getting from our customers is increasing day by day, We are happy to serve our delicious dishes from our all three oulets across two cities.</p>
+                                        <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 blog-card service-section-card mySlides-3" data-slide=3 target_ele="inactive">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
-                            <div class="card-body">
-                                <h4 class="card-heading">Home Delivery</h4>
-                                <p class="card-desc">Newly started across North and Central Calcutta. Our Home Delivery service offers three times meal - brakfast, lunch and dinner</p>
-                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                        <div class="col-sm-4 flip-box-card">
+                            <div class="custom-flip-box">
+                                <div class="custom-flip-box-inner">
+                                    <div class="custom-flip-box-front card-logo">
+                                        <img src="/wp-content/uploads/2024/05/catering_service_image_logo.webp" class="flip-card-img" alt="">
+                                        <h4 class="card-heading">Cattering</h4>
+                                    </div>
+                                    <div class="custom-flip-box-back card-body service-section-card">
+                                        <p class="card-desc">The love we are getting from our customers is increasing day by day, We are happy to serve our delicious dishes from our all three oulets across two cities.</p>
+                                        <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a class="custom-carousel-prev" prev-data-slide=3>❮</a>
-                        <a class="custom-carousel-next" next-data-slide=2>❯</a>
                     </div>
                 </div>
-                <div class="col-md-12 col-padding-style  content-banner-section">
+                <div class="col-md-12 col-padding-style  content-banner-section hidden-on-mob">
                     <div class="row content-banner-row">
                         <div class="col-sm-6 home-content-banner home-promo-banner-two-desktop">
                             <a class="home-korean-banner-redirection" banner-href="" onclick="window?.dataLayer?.push({event: 'home_ko_banner_view', url: window.location.href }); ">
@@ -114,7 +130,7 @@
                                 </picture>
                             </a>
                         </div>
-                        <div class="col-sm-6 home-content-banner home-promo-banner-one">
+                        <div class="col-sm-6 home-content-banner home-promo-banner-one-desktop">
                             <a class="happy-hours-banner-redirection" banner-href="" onclick="window?.dataLayer?.push({event: 'home_ko_banner_view', url: window.location.href }); ">
                                 <img class="banner-custom-css" src="<?=get_template_directory_uri();?>/assets/images/happy_hours_banner.webp" alt="Learn With Math Companion" height="auto" width="100%" style="width:100% !important; border-radius: 16px; box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);">
                             </a>
@@ -122,7 +138,45 @@
                     </div>
                 </div>
                 <?php require 'components/carousel/review-carousel.php'; ?>
-                <div class="col-md-12 col-padding-style  content-banner-section content-banner-section-mob">
+                <div class="col-md-12 col-padding-style  content-banner-section hidden-on-desktop">
+                    <div class="row content-banner-row">
+                        <div class="col-sm-12 home-content-banner home-promo-banner-one-desktop">
+                            <a class="happy-hours-banner-redirection" banner-href="" onclick="window?.dataLayer?.push({event: 'home_ko_banner_view', url: window.location.href }); ">
+                                <img class="banner-custom-css" src="<?=get_template_directory_uri();?>/assets/images/happy_hours_banner.webp" alt="Learn With Math Companion" height="auto" width="100%" style="width:100% !important; border-radius: 16px; box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-padding-style km-food-gallery">
+                    <h3 class="related-blog-h"><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span><b> Beauty Of Food </b><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span></h3>
+                    <div class="row blog-card-row">
+                        <div class="col-sm-4 blog-card">
+                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
+                            <div class="card-body">
+                                <h4 class="card-heading">Beauty Of Food</h4>
+                                <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 blog-card">
+                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h4 class="card-heading">Budget Bites</h4>
+                                <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 blog-card">
+                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                            <div class="card-body">
+                                <h4 class="card-heading">Budget Bites</h4>
+                                <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
+                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-padding-style  content-banner-section hidden-on-desktop">
                     <div class="row content-banner-row">
                         <div class="col-sm-12 home-content-banner home-promo-banner-two">
                             <a class="home-korean-banner-redirection" banner-href="" onclick="window?.dataLayer?.push({event: 'home_ko_banner_view', url: window.location.href }); ">
@@ -132,35 +186,6 @@
                                     <img class="banner-custom-css" src="<?=get_template_directory_uri();?>/assets/images/korean_food_banner.webp" alt="Learn With Math Companion" height="auto" width="100%" style="width:100% !important; border-radius: 16px; box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);">
                                 </picture>
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-padding-style  Donate-a-meal">
-                    <h3 class="related-blog-h"><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span><b> Special Combos </b><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span></h3>
-                    <div class="row blog-card-row">
-                        <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
-                            <div class="card-body">
-                                <h4 class="card-heading">Budget Bites</h4>
-                                <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
-                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
-                            <div class="card-body">
-                                <h4 class="card-heading">Budget Bites</h4>
-                                <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
-                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
-                            <div class="card-body">
-                                <h4 class="card-heading">Budget Bites</h4>
-                                <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
-                                <a href="http://localwww.krishmish.com/budget-bites/" class="read-more-txt">read more</a>
-                            </div>
                         </div>
                     </div>
                 </div>
