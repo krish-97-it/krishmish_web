@@ -157,7 +157,7 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li class=""><a href="<?=$base_url?>">Home</a></li>
-					<li><a href="<?=$base_url?>/menu-card/">Order</a></li>
+					<li><a href="https://krishmish-order.onrender.com/">Order</a></li>
 					<li class="dropdown">
 						<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
 						<ul class="dropdown-menu">

@@ -4,7 +4,7 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-6 footer-col logo-contact-info">
 						<div class="logofooter">
-							<img class="brand-logo-footer" alt="Brand" src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/shop-logo-one-1-e1689796889309.jpg" height="100px" width="100px">
+							<img class="brand-logo-footer" alt="Brand" src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/shop-logo-one-1-e1689796889309.jpg" height="100px" width="100px">
 							<p class="footer-intro">KrishMish - A House of Taste, Fresh, Affordable Combos Of Food</p>
 						</div>
 						<div class="addressfooter">
