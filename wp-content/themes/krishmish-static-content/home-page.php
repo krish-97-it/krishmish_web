@@ -24,22 +24,22 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner home-carousel-inner">
                         <div class="item active">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/food-banner-seven.jpg" alt="drinks" height="auto" width="100%">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/food-banner-seven.jpg" alt="drinks" height="auto" width="100%">
                         </div>
                         <div class="item">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/food-banner-six.jpg" alt="Starter-pack" height="auto" width="100%">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/food-banner-six.jpg" alt="Starter-pack" height="auto" width="100%">
                         </div>
                         <div class="item">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/food-banner-chinese.jpg" alt="chinese-cusine" height="auto" width="100%">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/food-banner-chinese.jpg" alt="chinese-cusine" height="auto" width="100%">
                         </div>
                         <div class="item">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/food-banner-five.jpg" alt="Indian-xusine" height="auto" width="100%">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/food-banner-five.jpg" alt="Indian-xusine" height="auto" width="100%">
                         </div>
                         <div class="item">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/food-banner-two.jpg" alt="South-indian" height="auto" width="100%">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/food-banner-two.jpg" alt="South-indian" height="auto" width="100%">
                         </div>
                         <div class="item">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/food-banner-five.png" alt="icecream-desert" height="auto" width="100%">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/food-banner-five.png" alt="icecream-desert" height="auto" width="100%">
                         </div>
                     </div>
 
@@ -151,7 +151,7 @@
                     <h3 class="related-blog-h"><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span><b> Beauty Of Food </b><span class="glyphicon glyphicon-star custom-glyphicon-icon"></span></h3>
                     <div class="row blog-card-row">
                         <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
                             <div class="card-body">
                                 <h4 class="card-heading">Beauty Of Food</h4>
                                 <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
@@ -159,7 +159,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
                             <div class="card-body">
                                 <h4 class="card-heading">Budget Bites</h4>
                                 <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
                             <div class="card-body">
                                 <h4 class="card-heading">Budget Bites</h4>
                                 <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
@@ -193,7 +193,7 @@
                     <h3 class="related-blog-h"><span class="glyphicon glyphicon-tower custom-glyphicon-icon"></span><b> Related Blogs </b><span class="glyphicon glyphicon-tower custom-glyphicon-icon"></span></h3>
                     <div class="row blog-card-row">
                         <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png"  class="card-img" alt="">
                             <div class="card-body">
                                 <h4 class="card-heading">Budget Bites</h4>
                                 <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
                             <div class="card-body">
                                 <h4 class="card-heading">Budget Bites</h4>
                                 <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
@@ -209,7 +209,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 blog-card">
-                            <img src="http://localhost/wordpress-basics-learning/wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
+                            <img src="<?php get_template_directory_uri()?>wp-content/uploads/2023/07/Budget-Bites-image-e1689849028294.png" class="card-img" alt="">
                             <div class="card-body">
                                 <h4 class="card-heading">Budget Bites</h4>
                                 <p class="card-desc">If you are a person with a busy schedule and do not have much time for snacking, then combo meals are beneficial for you. At an affordable rates, you will get enough quality food to satisfy your hunger and at the same time, you can save time by not consuming the time to decide on a menu.</p>
